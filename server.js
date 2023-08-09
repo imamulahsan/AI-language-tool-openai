@@ -8,7 +8,7 @@ const connectDB = require("./config/db");
 const errorHandler = require("./middlewares/errorMiddleware");
 
 //routes path
-const authRoutes = require("./routes/authRoutes");
+const authRoutes = require("./routes/authRoute");
 
 
 //dotenv
