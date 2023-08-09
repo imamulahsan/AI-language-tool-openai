@@ -1,19 +1,26 @@
 import React from 'react'
-import {Box, Link, Typography} from '@mui/material'
+import {Box, Typography, useTheme} from '@mui/material'
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const theme = useTheme();
   return (
-    <Box 
-    width={'100%'}
-    textAlign={'center'}
-    p="1rem 6%"
-    sx={{ boxShadow: 3, mb: 2 }}
-     >
-        <Typography variant="h1" color="black" fontWeight="bold">
-        TEXT SUMMARIZER
+    <Box
+      width={"100%"}
+      backgroundColor={theme.palette.background.alt}
+      p="1rem 6%"
+      textAlign={"center"}
+      sx={{ boxShadow: 3, mb: 2 }}
+    >
+      <Typography variant="h1" color="primary" fontWeight="bold">
+        AI GPT3 Clone
       </Typography>
-      <Link href='/register' p={"2"}>Sign up</Link>
-      <Link href='/login' p={"5"}>Sign In</Link>
+      <NavLink to="/register" p={1}>
+            Sign Up
+          </NavLink>
+          <NavLink to="/login" p={1}>
+            Sign In
+          </NavLink>
     </Box>
     
   )
