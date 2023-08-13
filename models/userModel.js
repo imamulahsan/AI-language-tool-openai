@@ -46,22 +46,22 @@ const userSchema = new mongoose.Schema({
   };
   
   //SIGN TOKEN
-  userSchema.methods.getSignedToken = function (res) {
-    const acccesToken = JWT.sign(
-      { id: this._id },
-      process.env.JWT_ACCESS_SECRET,
-      { expiresIn: process.env.JWT_ACCESS_EXPIREIN }
-    );
-    const refreshToken = JWT.sign(
-      { id: this._id },
-      process.env.JWT_REFRESH_TOKEN,
-      { expiresIn: process.env.JWT_REFRESH_EXIPREIN }
-    );
-    res.cookie("refreshToken", `${refreshToken}`, {
-      maxAge: 86400 * 7000,
-      httpOnly: true,
-    });
-  };
+userSchema.methods.getSignedToken = function (res) {
+  const acccesToken = JWT.sign(
+    { id: this._id },
+    process.env.JWT_ACCESS_SECRET,
+    { expiresIn: '60d' }
+  );
+  const refreshToken = JWT.sign(
+    { id: this._id },
+    process.env.JWT_REFRESH_TOKEN,
+    { expiresIn: '60d' }
+  );
+  res.cookie("refreshToken", `${refreshToken}`, {
+    maxAge: 86400 * 7000,
+    httpOnly: true,
+  });
+};
   
   const User = mongoose.model("User", userSchema);
   
