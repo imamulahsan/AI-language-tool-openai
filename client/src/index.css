@@ -10,7 +10,7 @@ body{
 }
 
 a {
-  color: #60bf70 !important;
+  color: #f5e2b0 !important;
   text-decoration: none;
   padding: 20px;
   margin-top: 20px;
@@ -22,5 +22,15 @@ a:hover {
 
 a.active {
   color: #57d96d !important;
+}
+
+.align-right {
+  display: flex !important;
+  justify-content: right !important;
+}
+
+.align-left {
+  display: flex !important;
+  justify-content: left !important;
 }
 
