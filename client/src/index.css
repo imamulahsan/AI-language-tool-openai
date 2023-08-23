@@ -10,7 +10,7 @@ body{
 }
 
 a {
-  color: #f5e2b0 !important;
+  color: #0783bd !important;
   text-decoration: none;
   padding: 20px;
   margin-top: 20px;
@@ -21,7 +21,7 @@ a:hover {
 }
 
 a.active {
-  color: #57d96d !important;
+  color: #0c3872 !important;
 }
 
 .align-right {

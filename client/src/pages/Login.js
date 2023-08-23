@@ -50,7 +50,7 @@ const Login = () => {
       m={"2rem auto"}
       borderRadius={5}
       sx={{ boxShadow: 5 }}
-      backgroundColor={theme.palette.background.alt}
+      backgroundColor={theme.palette.neutral.light}
     >
       <Collapse in={error}>
         <Alert severity="error" sx={{ mb: 2 }}>
@@ -58,7 +58,7 @@ const Login = () => {
         </Alert>
       </Collapse>
       <form onSubmit={handleSubmit}>
-        <Typography variant="h3">Sign In</Typography>
+        <Typography variant="h2">Sign In</Typography>
 
         <TextField
           label="email"
@@ -91,7 +91,7 @@ const Login = () => {
         >
           Sign In
         </Button>
-        <Typography mt={2}>
+        <Typography mt={3}>
           Dont have an account ? <Link to="/register">Please Register</Link>
         </Typography>
       </form>

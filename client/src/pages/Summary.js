@@ -49,7 +49,7 @@ const Summary = () => {
       m={"2rem auto"}
       borderRadius={5}
       sx={{ boxShadow: 5 }}
-      backgroundColor={theme.palette.background.alt}
+      backgroundColor={theme.palette.neutral.light}
     >
       <Collapse in={error}>
         <Alert severity="error" sx={{ mb: 2 }}>
