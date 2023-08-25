@@ -13,21 +13,21 @@ import {
   Card,
 } from "@mui/material";
 
-const Summary = () => {
+const Keyword = () => {
   const theme = useTheme();
   //const navigate = useNavigate();
   //media
   const isNotMobile = useMediaQuery("(min-width: 1000px)");
   // states
   const [text, settext] = useState("");
-  const [summary, setSummary] = useState("");
+  const [keyword, setSummary] = useState("");
   const [error, setError] = useState("");
 
   //register ctrl
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("/api/v1/openai/summary", { text });
+      const { data } = await axios.post("/api/v1/openai/keyword", { text });
       console.log(data);
       setSummary(data);
     } catch (err) {
@@ -57,10 +57,10 @@ const Summary = () => {
         </Alert>
       </Collapse>
       <form onSubmit={handleSubmit}>
-        <Typography variant="h3">Text Summarization</Typography>
+        <Typography variant="h3">Extract Keyword</Typography>
 
         <TextField
-          placeholder="Please add your text for summarization"
+          placeholder="Please add your text to extract keywords"
           type="text"
           multiline={true}
           required
@@ -82,11 +82,11 @@ const Summary = () => {
           Submit
         </Button>
         <Typography mt={2}>
-          Want to use other tool ? <Link to="/">GO BACK</Link>
+          Want to use other tool? <Link to="/">GO BACK</Link>
         </Typography>
       </form>
 
-      {summary ? (
+      {keyword ? (
         <Card
           sx={{
             mt: 4,
@@ -98,7 +98,7 @@ const Summary = () => {
             bgcolor: "background.default",
           }}
         >
-          <Typography p={2}>{summary}</Typography>
+          <Typography p={2}>{keyword}</Typography>
         </Card>
       ) : (
         <Card
@@ -121,7 +121,7 @@ const Summary = () => {
               lineHeight: "450px",
             }}
           >
-            The summary is.....
+            The extracted keywords are.....
           </Typography>
         </Card>
       )}
@@ -129,4 +129,4 @@ const Summary = () => {
   );
 };
 
-export default Summary;
+export default Keyword;

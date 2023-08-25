@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography,useTheme, Card } from "@mui/material";
+import { Typography,useTheme, Card, Box, Link } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Button, CardActions } from '@mui/material';
 import CardContent from '@mui/material/CardContent';
@@ -16,6 +16,12 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import CodeIcon from '@mui/icons-material/Code';
 import Grid from '@mui/material/Grid';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+
+
 
 
 const Homepage = () => {
@@ -74,7 +80,7 @@ const Homepage = () => {
           },
 
          }} 
-        onClick={() => navigate("/summary")}>
+        onClick={() => navigate("/grammar")}>
         <CardContent>
           <MenuBookIcon style={{ fontSize: 80 }} sx={{ color: theme.palette.background.alt }}/>
         <Typography variant="h3" component="div">
@@ -86,7 +92,7 @@ const Homepage = () => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Button size="medium" onClick={() => navigate("/summary")}>Explore</Button>
+        <Button size="medium" onClick={() => navigate("/grammar")}>Explore</Button>
         </CardActions>
         </Card>  
         
@@ -105,7 +111,7 @@ const Homepage = () => {
           },
 
          }} 
-        onClick={() => navigate("/summary")}>
+        onClick={() => navigate("/keyword")}>
         <CardContent>
           <KeyIcon style={{ fontSize: 80 }} sx={{ color: theme.palette.background.alt }}/>
         <Typography variant="h3" component="div">
@@ -117,7 +123,7 @@ const Homepage = () => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Button size="medium" onClick={() => navigate("/summary")}>Explore</Button>
+        <Button size="medium" onClick={() => navigate("/keyword")}>Explore</Button>
         </CardActions>
         </Card>
       </Grid>
@@ -136,7 +142,7 @@ const Homepage = () => {
           },
 
          }} 
-        onClick={() => navigate("/summary")}>
+        onClick={() => navigate("/translation")}>
         <CardContent>
           <TranslateIcon style={{ fontSize: 80 }} sx={{ color: theme.palette.background.alt }}/>
         <Typography variant="h3" component="div">
@@ -148,7 +154,7 @@ const Homepage = () => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Button size="medium" onClick={() => navigate("/summary")}>Explore</Button>
+        <Button size="medium" onClick={() => navigate("/translation")}>Explore</Button>
         </CardActions>
         </Card>
         
@@ -168,7 +174,7 @@ const Homepage = () => {
           },
 
          }} 
-        onClick={() => navigate("/summary")}>
+        onClick={() => navigate("/lesson")}>
         <CardContent>
           <SchoolIcon style={{ fontSize: 80 }} sx={{ color: theme.palette.background.alt }}/>
         <Typography variant="h3" component="div">
@@ -180,7 +186,7 @@ const Homepage = () => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Button size="medium" onClick={() => navigate("/summary")}>Explore</Button>
+        <Button size="medium" onClick={() => navigate("/lesson")}>Explore</Button>
         </CardActions>
         </Card>       
       </Grid>
@@ -200,7 +206,7 @@ const Homepage = () => {
           },
 
          }} 
-        onClick={() => navigate("/summary")}>
+        onClick={() => navigate("/direction")}>
         <CardContent>
           <DirectionsIcon style={{ fontSize: 80 }} sx={{ color: theme.palette.background.alt }}/>
         <Typography variant="h3" component="div">
@@ -212,7 +218,7 @@ const Homepage = () => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Button size="medium" onClick={() => navigate("/summary")}>Explore</Button>
+        <Button size="medium" onClick={() => navigate("/direction")}>Explore</Button>
         </CardActions>
         </Card>     
       </Grid>
@@ -232,7 +238,7 @@ const Homepage = () => {
           },
 
          }} 
-        onClick={() => navigate("/summary")}>
+        onClick={() => navigate("/emoji")}>
         <CardContent>
           <EmojiEmotionsIcon style={{ fontSize: 80 }} sx={{ color: theme.palette.background.alt }}/>
         <Typography variant="h3" component="div">
@@ -244,7 +250,7 @@ const Homepage = () => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Button size="medium" onClick={() => navigate("/summary")}>Explore</Button>
+        <Button size="medium" onClick={() => navigate("/emoji")}>Explore</Button>
         </CardActions>
         </Card>       
       </Grid>
@@ -264,7 +270,7 @@ const Homepage = () => {
           },
 
          }} 
-        onClick={() => navigate("/summary")}>
+        onClick={() => navigate("/mood")}>
         <CardContent>
           <ColorLensIcon style={{ fontSize: 80 }} sx={{ color: theme.palette.background.alt }}/>
         <Typography variant="h3" component="div">
@@ -276,7 +282,7 @@ const Homepage = () => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Button size="medium" onClick={() => navigate("/summary")}>Explore</Button>
+        <Button size="medium" onClick={() => navigate("/mood")}>Explore</Button>
         </CardActions>
         </Card>  
       </Grid>
@@ -296,7 +302,7 @@ const Homepage = () => {
           },
 
          }} 
-        onClick={() => navigate("/summary")}>
+        onClick={() => navigate("/rap")}>
         <CardContent>
           <MusicNoteIcon style={{ fontSize: 80 }} sx={{ color: theme.palette.background.alt }}/>
         <Typography variant="h3" component="div">
@@ -308,7 +314,7 @@ const Homepage = () => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Button size="medium" onClick={() => navigate("/summary")}>Explore</Button>
+        <Button size="medium" onClick={() => navigate("/rap")}>Explore</Button>
         </CardActions>
         </Card> 
       </Grid>
@@ -328,7 +334,7 @@ const Homepage = () => {
           },
 
          }} 
-        onClick={() => navigate("/summary")}>
+        onClick={() => navigate("/tweet")}>
         <CardContent>
           <TwitterIcon style={{ fontSize: 80 }} sx={{ color: theme.palette.background.alt }}/>
         <Typography variant="h3" component="div">
@@ -340,7 +346,7 @@ const Homepage = () => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Button size="medium" onClick={() => navigate("/summary")}>Explore</Button>
+        <Button size="medium" onClick={() => navigate("/tweet")}>Explore</Button>
         </CardActions>
         </Card>     
       </Grid>
@@ -360,7 +366,7 @@ const Homepage = () => {
           },
 
          }} 
-        onClick={() => navigate("/summary")}>
+        onClick={() => navigate("/product")}>
         <CardContent>
           <ShoppingCartIcon style={{ fontSize: 80 }} sx={{ color: theme.palette.background.alt }}/>
         <Typography variant="h3" component="div">
@@ -372,7 +378,7 @@ const Homepage = () => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Button size="medium" onClick={() => navigate("/summary")}>Explore</Button>
+        <Button size="medium" onClick={() => navigate("/product")}>Explore</Button>
         </CardActions>
         </Card>  
       </Grid>
@@ -392,7 +398,7 @@ const Homepage = () => {
           },
 
          }} 
-        onClick={() => navigate("/summary")}>
+        onClick={() => navigate("/code")}>
         <CardContent>
           <CodeIcon style={{ fontSize: 80 }} sx={{ color: theme.palette.background.alt }}/>
         <Typography variant="h3" component="div">
@@ -404,11 +410,23 @@ const Homepage = () => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Button size="medium" onClick={() => navigate("/summary")}>Explore</Button>
+        <Button size="medium" onClick={() => navigate("/code")}>Explore</Button>
         </CardActions>
         </Card>
       </Grid>
     </Grid>
+    
+    <Box>
+      <BottomNavigation sx={{ position: 'fixed', bottom: 0, width: 1.0, alignItems:'center' }}>
+        <Typography variant="h4">Developed by Imamul Ahsan</Typography>
+        <br></br>
+        <Link href="https://github.com/imamulahsan/text-summarizer-openai" underline="none"><GitHubIcon/></Link>
+        <Link href="https://www.linkedin.com/in/imamulahsan/" underline="none"><LinkedInIcon/></Link>
+        <Link href="https://www.youtube.com/channel/UCeGfZO6hnZDptaHwcXQK6rw" underline="none"><YouTubeIcon/></Link>
+
+      </BottomNavigation>
+    </Box>
+    
   </>
   )
 }

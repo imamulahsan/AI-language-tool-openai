@@ -13,21 +13,21 @@ import {
   Card,
 } from "@mui/material";
 
-const Summary = () => {
+const Rap = () => {
   const theme = useTheme();
   //const navigate = useNavigate();
   //media
   const isNotMobile = useMediaQuery("(min-width: 1000px)");
   // states
   const [text, settext] = useState("");
-  const [summary, setSummary] = useState("");
+  const [rap, setSummary] = useState("");
   const [error, setError] = useState("");
 
   //register ctrl
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("/api/v1/openai/summary", { text });
+      const { data } = await axios.post("/api/v1/openai/rap", { text });
       console.log(data);
       setSummary(data);
     } catch (err) {
@@ -57,10 +57,10 @@ const Summary = () => {
         </Alert>
       </Collapse>
       <form onSubmit={handleSubmit}>
-        <Typography variant="h3">Text Summarization</Typography>
+        <Typography variant="h3">Rap battle</Typography>
 
         <TextField
-          placeholder="Please add your text for summarization"
+          placeholder="Please add two names of person to start a rap battle"
           type="text"
           multiline={true}
           required
@@ -82,11 +82,11 @@ const Summary = () => {
           Submit
         </Button>
         <Typography mt={2}>
-          Want to use other tool ? <Link to="/">GO BACK</Link>
+          Want to use other tool? <Link to="/">GO BACK</Link>
         </Typography>
       </form>
 
-      {summary ? (
+      {rap ? (
         <Card
           sx={{
             mt: 4,
@@ -98,7 +98,7 @@ const Summary = () => {
             bgcolor: "background.default",
           }}
         >
-          <Typography p={2}>{summary}</Typography>
+          <Typography p={2}>{rap}</Typography>
         </Card>
       ) : (
         <Card
@@ -121,7 +121,7 @@ const Summary = () => {
               lineHeight: "450px",
             }}
           >
-            The summary is.....
+            The rap battle is starting.....
           </Typography>
         </Card>
       )}
@@ -129,4 +129,4 @@ const Summary = () => {
   );
 };
 
-export default Summary;
+export default Rap;
