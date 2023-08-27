@@ -29,7 +29,7 @@ In this app, an user has to login in the system with his credential. If the user
 > Here is the homepage of the application
 ![Example screenshot](https://github.com/imamulahsan/AI-language-tool-openai/blob/main/Github.png)
 ### Text Summarization
-  The text summarizer module takes some text as an input and summarizes important information to the user. The text is simplified to a level appropriate for a second-grade student.
+The given text is summarized to a level appropriate for a second-grade student.
 ### Grammar Correction
   Corrects the grammar of an incorrect sentence or a paragraph. It follows the standard english grammar.
 ### Keyword Extractor
