@@ -1,7 +1,7 @@
 # AI Language tool using OpenAI API
 > A MERN application where various language operations can be done like text summarization, grammar correction, keyword extraction, translation, lesson plan writing, turn by turn direction guideline, emoji chatbot, mood to color, twitter sentiment analysis, AI based rap battle, product review classification and code explanation can be done. 
 >
-> Live demo [_here_](https://www.youtube.com).
+> Live demo [_here_]([https://www.youtube.com](https://www.youtube.com/watch?v=U0N5khyGdQ4&t=15s)).
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -60,4 +60,4 @@ Install node, express, and react. Download or clone the repository. Setup an .en
 The project is developed using several resources. Special thanks to TechInfoYT youtube channel to provide a simplistic tutorial for this project.
 
 ## Contact
-Created by [@imamulahsan](https://www.youtube.com) - feel free to contact me!
+Created by [@imamulahsan](https://www.youtube.com/channel/UCeGfZO6hnZDptaHwcXQK6rw) - feel free to contact me!
